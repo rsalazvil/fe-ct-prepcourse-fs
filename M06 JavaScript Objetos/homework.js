@@ -81,10 +81,10 @@ function tieneEmail(objetoUsuario) {
    obj = objetoUsuario;
    
    
-   if (obj.email == '') {
+   if (obj.email == undefined) {
       return false;
-   } else if (obj.email !== '') {
-      return false;
+   } else  {
+      return true;
    }
 }
 
@@ -175,7 +175,7 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    // PorcentajeDeDescuento ---> 0.2
    // Precio final ---> 8
    // Tu código:
-   calcularPrecioDescuento = 'calcularPrecioDescuento';
+   const calcularPrecioDescuento = 'calcularPrecioDescuento';
    objetoProducto[calcularPrecioDescuento] = function() {
       // Calcula el precio con descuento
       const precioConDescuento = this.precio - (this.precio * (this.porcentajeDeDescuento ));
